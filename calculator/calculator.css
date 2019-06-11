@@ -1,0 +1,26 @@
+body {
+	text-align: center;
+	margin:auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	min-height: 100vh;
+	background-color:pink;
+}
+.border {
+	border: 5px red solid;
+	background-color:white;
+}
+.padding {
+	padding-top:15px;
+}
+h1 {
+	text-decoration: underline;
+}
+
+#displayResult {
+	border: 1px black solid;
+
+}

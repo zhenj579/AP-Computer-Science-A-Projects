@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<title> calculator </title>
+</head>
+<body>
+	<div class="border">
+	<header> 
+		<h1> Basic four function calculator </h1>
+	</header>
+		<div class="padding">
+			<input type="number" id="num1" placeholder="insert number here">
+		</div>
+			<div class="padding">
+				<input type="number" id="num2" placeholder="insert number here">
+			</div>
+	<div>
+		<div class="padding">
+		<select id="operation">
+			<option value="Divide"> Divide </option>
+				<option value="Subtract"> Subtract </option>
+					<option value="Add"> Add </option>
+						<option value="Multiply"> Multiply </option>
+							</select>
+	</div>
+	<div class="padding">
+		<button onclick="onClick()"> Calculate </button>
+		
+	</div>
+		<p id="displayResult"> Result will display here </p>
+</div>
+</div>
+	<script type="text/javascript">
+		"use strict";
+		function onClick() { 
+			const num1 = parseFloat(document.getElementById("num1").value);
+			const num2 = parseFloat(document.getElementById("num2").value);
+
+			function subtractNumber () {
+				return num1 - num2
+			}
+
+			function addNumber () {
+				return num1 + num2
+			}
+
+			function multiplyNumber () {
+				return num1 * num2
+			}
+
+			function divideNumber () {
+				return num1 / num2
+			}	
+
+			switch (document.getElementById("operation").value) {
+			case "Add":
+				document.getElementById("displayResult").innerHTML = addNumber()
+				break;
+
+			case "Subtract":
+				document.getElementById("displayResult").innerHTML = subtractNumber()
+				break;
+
+			case "Multiply":
+				document.getElementById("displayResult").innerHTML = multiplyNumber()
+				break;
+
+			case "Divide":
+				document.getElementById("displayResult").innerHTML = divideNumber()
+				break;
+
+		}
+	}
+
+	</script>
+</body>
+</html>
